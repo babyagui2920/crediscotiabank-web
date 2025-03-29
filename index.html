@@ -6,6 +6,38 @@
     <title>Document</title>
 </head>
 <body>
+    class CajaFranco:
+    def init(self):
+    self.name = "Caja Franco"
+    self.description = "Préstamo personal en efectivo que te permite utilizarlo para lo que desees."
+    self.resources = [
+    {
+    "name": "Lector de Pantalla",
+    "description": "Software de ayuda para invidentes que lee la información en la pantalla.",
+    "examples": [
+    "JAWS V10 en español: Un lector de pantalla muy desarrollado.",
+    "NVDA: Software libre y de código abierto para Windows.",
+    "MexVox: Sistema de PC que se comunica a través de síntesis de voz."
+    ]
+    }
+    ]
+    self.legislation = {
+    "law": "Ley 28530",
+    "description": "Promoción de Acceso a Internet para Personas con Discapacidad."
+    }
     
+    def display_info(self):
+    print(f"{self.name}: {self.description}")
+    print("\nRecursos:")
+    for resource in self.resources:
+    print(f"- {resource['name']}: {resource['description']}")
+    for example in resource['examples']:
+    print(f"  * {example}")
+    
+    print(f"\nLegislación:\n- {self.legislation['law']} - {self.legislation['description']}")
+    
+    if name == "main":
+    caja_franco = CajaFranco()
+    caja_franco.display_info() 
 </body>
 </html>
